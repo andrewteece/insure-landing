@@ -214,11 +214,20 @@ h6 {
 
 .main__nav {
   position: absolute;
-  width: 100%;
+  width: 100vw;
   height: 0;
   top: 5rem;
   left: -1.5rem;
   padding-top: 3.125rem;
+  transition: all 300ms ease-in;
+}
+
+.main__nav--active {
+  height: calc(100vh - 5rem);
+  background: url(../images/bg-pattern-mobile-nav.svg), var(--clr-primary-700);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
 .main__nav--list {
@@ -233,6 +242,7 @@ h6 {
 
 .main__nav--link {
   display: inline-block;
+  color: var(--clr-neutral-100);
   font-size: var(--fs-lg);
   margin-bottom: 2.5rem;
   letter-spacing: 2px;
@@ -286,4 +296,17 @@ h6 {
   color: var(--clr-neutral-100);
   line-height: 1.6;
   padding-block: 2rem;
+}
+
+/* KEYFRAMES */
+
+@keyframes nav-ani {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
