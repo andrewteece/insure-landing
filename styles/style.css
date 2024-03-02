@@ -42,6 +42,7 @@
 
 * {
   margin: 0;
+  padding: 0;
 }
 
 body {
@@ -75,8 +76,146 @@ a {
 
 /* BODY/GLOBAL */
 
+body {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-base);
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.wrapper {
+  max-width: 70rem;
+  margin: 0 auto;
+}
+
+.divider {
+  width: 10rem;
+  height: 1px;
+  margin-bottom: 4rem;
+}
+
+.divider--light {
+  background: var(--clr-neurtal-200);
+}
+
+.divider-dark {
+  background: var(--clr-neutral-500);
+}
 /* TYPOGRAPHY */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--ff-secondary);
+  line-height: 1.1;
+}
 
 /* COMPONENTS */
 
+.btn {
+  padding-inline: 2rem;
+  padding-block: 0.5rem;
+}
+
 /* UTILITY */
+
+/* HEADER & NAV */
+
+.main__header {
+  position: relative;
+  padding: 0 1.5rem;
+  background-color: var(--clr-neutral-100);
+  z-index: 5;
+}
+
+.header__wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 3.75rem;
+}
+
+.hamburger-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  background-color: transparent;
+  border: 2px solid var(--clr-neutral-700);
+  cursor: pointer;
+}
+
+.hamburger-menu.open .hamburger-menu {
+  transform: translateX(-50px);
+  background: transparent;
+}
+
+.hamburger-menu.open .hamburger-menu::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+
+.hamburger-menu.open .hamburger-menu::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
+
+.hamburger {
+  position: relative;
+  width: 18px;
+  height: 2px;
+  background: var(--clr-neutral-700);
+  border: none;
+  transition: transform 300ms ease-in-out, background 250ms ease-in-out;
+}
+
+.hamburger::before,
+.hamburger::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 2px;
+  background: var(--clr-primary-700);
+  transition: transform 300ms ease-in-out;
+}
+
+.hamburger::before {
+  transform: translateY(5px);
+}
+
+.hamburger::after {
+  transform: translateY(-5px);
+}
+
+.main__nav {
+  position: absolute;
+  width: 100%;
+  height: 0;
+  top: 5rem;
+  left: -1.5rem;
+  padding-top: 3.125rem;
+}
+
+.main__nav--list {
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+}
+
+.main__nav--item {
+  opacity: 0;
+}
+
+.main__nav--link {
+  display: inline-block;
+  font-size: var(--fs-lg);
+  margin-bottom: 2.5rem;
+  letter-spacing: 2px;
+  word-spacing: 3px;
+  text-transform: uppercase;
+}
