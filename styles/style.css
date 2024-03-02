@@ -116,8 +116,12 @@ h6 {
 /* COMPONENTS */
 
 .btn {
-  padding-inline: 2rem;
+  padding-inline: 64px;
   padding-block: 0.5rem;
+  font-size: var(--fs-sm);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
 }
 
 /* UTILITY */
@@ -218,4 +222,39 @@ h6 {
   letter-spacing: 2px;
   word-spacing: 3px;
   text-transform: uppercase;
+}
+
+/* HERO */
+
+.hero {
+  position: relative;
+  background: var(--clr-primary-700);
+  z-index: 2;
+}
+
+.hero::before {
+  position: absolute;
+  content: url(../images/bg-pattern-intro-left-mobile.svg);
+  top: 28.25rem;
+  left: 0;
+}
+
+.hero::after {
+  position: absolute;
+  content: url(../images/bg-pattern-intro-right-mobile.svg);
+  bottom: -186px;
+  right: 0;
+}
+
+.hero__image img {
+  height: 28.125rem;
+  object-fit: cover;
+}
+
+.hero__content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 5.625rem 1.5rem;
 }
