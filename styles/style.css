@@ -170,16 +170,16 @@ h6 {
   cursor: pointer;
 }
 
-.hamburger-menu.open .hamburger-menu {
+.hamburger-menu.open .hamburger {
   transform: translateX(-50px);
   background: transparent;
 }
 
-.hamburger-menu.open .hamburger-menu::before {
+.hamburger-menu.open .hamburger::before {
   transform: rotate(45deg) translate(35px, -35px);
 }
 
-.hamburger-menu.open .hamburger-menu::after {
+.hamburger-menu.open .hamburger::after {
   transform: rotate(-45deg) translate(35px, 35px);
 }
 
@@ -224,7 +224,7 @@ h6 {
 
 .main__nav--active {
   height: calc(100vh - 5rem);
-  background: url(../images/bg-pattern-mobile-nav.svg), var(--clr-primary-700);
+  background: url(../images/bg-pattern-mobile-nav.svg), var(--clr-neutral-700);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
