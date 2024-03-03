@@ -353,7 +353,7 @@ h6 {
 
 .about {
   padding-inline: 1.5rem;
-  margin-block: var(--clr-neutral-500);
+  margin-block: 5rem;
 }
 
 .about__wrapper {
