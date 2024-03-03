@@ -349,6 +349,42 @@ h6 {
   line-height: 1.6;
 }
 
+/* ABOUT */
+
+.about {
+  padding-inline: 1.5rem;
+  margin-block: var(--clr-neutral-500);
+}
+
+.about__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: var(--clr-primary-700);
+  position: relative;
+  padding-inline: 1.5rem;
+  padding-block: 4rem;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.about__wrapper::before {
+  position: absolute;
+  content: url(../images/bg-pattern-how-we-work-mobile.svg);
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.about__heading {
+  font-size: var(--fs-heading-xlg);
+  font-weight: var(--fw-regular);
+  color: var(--clr-neutral-100);
+  padding-bottom: 2.5rem;
+}
+
 /* KEYFRAMES */
 
 @keyframes nav-ani {
