@@ -98,7 +98,7 @@ body {
   background: var(--clr-neurtal-200);
 }
 
-.divider-dark {
+.divider--dark {
   background: var(--clr-neutral-500);
 }
 /* TYPOGRAPHY */
@@ -305,6 +305,49 @@ h6 {
 }
 
 /* CARDS */
+
+.cards__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cards__heading {
+  font-size: var(--fs-heading-xxlg);
+  font-weight: var(--fw-regular);
+  padding-bottom: 3rem;
+}
+
+.cards__content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+.cards .divider {
+  margin-top: 8rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-inline: 2rem;
+  text-align: center;
+}
+
+.card__heading {
+  font-size: var(--fs-heading-lg);
+  font-weight: var(--fw-regular);
+  padding-top: 2rem;
+}
+
+.card__text {
+  color: var(--clr-neutral-500);
+  padding-top: 1.5rem;
+  padding-bottom: 4rem;
+  line-height: 1.6;
+}
 
 /* KEYFRAMES */
 
