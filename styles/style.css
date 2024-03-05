@@ -370,6 +370,7 @@ h6 {
     content: url(../images/bg-pattern-intro-left-desktop.svg);
     top: unset;
     bottom: -335px;
+    z-index: -1;
   }
 
   .hero::after {
@@ -407,6 +408,12 @@ h6 {
 
   .hero__heading {
     font-size: var(--fs-heading-xxxlg);
+  }
+}
+
+@media (min-width: 1000px) {
+  .hero__heading {
+    font-size: var(--fs-heading-xxxxlg);
   }
 }
 
@@ -453,6 +460,41 @@ h6 {
   padding-top: 1.5rem;
   padding-bottom: 4rem;
   line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+  .cards__content {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .card {
+    max-width: 280px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .cards__wrapper {
+    align-items: flex-start;
+  }
+
+  .cards__heading {
+    font-size: var(--fs-heading-xxxxlg);
+  }
+
+  .cards__content {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .card {
+    max-width: 100%;
+    align-items: flex-start;
+  }
+
+  .card__text {
+    text-align: left;
+  }
 }
 
 /* ABOUT */
