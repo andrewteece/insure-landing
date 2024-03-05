@@ -533,6 +533,30 @@ h6 {
   padding-bottom: 2.5rem;
 }
 
+@media (min-width: 1000px) {
+  .about__wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    padding-inline: 4rem;
+    padding-block: 4rem;
+  }
+
+  .about__wrapper::before {
+    content: url(../images/bg-pattern-how-we-work-desktop.svg);
+  }
+
+  .about__heading {
+    flex-basis: 50%;
+    padding-bottom: 0;
+  }
+
+  .about button {
+    z-index: 2;
+  }
+}
+
 /* FOOTER */
 
 .footer {
